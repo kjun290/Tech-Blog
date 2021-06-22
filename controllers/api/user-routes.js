@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { ENETUNREACH } = require('node:constants');
 const{user} = require('../../models');
 
 router.post('/',(req, res) => {
