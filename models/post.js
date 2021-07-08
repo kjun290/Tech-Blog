@@ -1,11 +1,11 @@
 const {Sequelize, Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
-const { post } = require('../controllers/home-routes');
+//const { post } = require('../controllers/home-routes');
 
 class Post extends Model {}
 
 
-post.init(
+Post.init(
     {
         title:DataTypes.STRING,
         body:DataTypes.STRING

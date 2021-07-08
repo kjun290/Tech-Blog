@@ -1,10 +1,11 @@
 const router = require("express").Router();
-const {post, comment, user} = require('../models');
+const {Post, comment, User} = require('../models/');
 
 
 // get all posts for the homepage
 router.get('/', (req, res) => {
-    post.findAll({
+
+    Post.findAll({
         include: [User],
     })
     .then((dbPostData) => {
