@@ -1,0 +1,27 @@
+<div class='container p-3'>
+    <div class='row border border-dark bg-light'>
+        <div class='col bg-secondary p-4'>
+        <h1>My Dashboard</h1>
+        </div>
+    </div>
+</div>
+
+{{#if blogs.length}}
+{{#each blogs as |blog| }}
+<div class='container p-3'>
+    <div class='row border border-dark bg-light'>
+        <div class='col bg-secondary text-white p-2' id='blog-title'><a href='/editpost/{{blog.id}}'>{{blog.title}}</a></div>
+        <div class='col bg-secondary text-white p-2' id='username-date'>Posted on {{format_date blog.date_created}}</div>
+        <p class='bg-light p-3' id='blog-contents'>{{blog.contents}}</p>
+    </div>
+</div>
+{{/each}}
+{{/if}}
+
+<div class='container p-3'>
+    <div class='row border border-dark bg-light'>
+        <a class='btn btn-secondary btn-lg btn-block' href='/newpost' role='button'>+ New Post</a>
+    </div>
+</div>
+
+<script src='./js/dashboard.js'></script>
