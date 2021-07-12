@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const{user} = require('../../models');
+const{User} = require('../../models');
 
 router.post('/',(req, res) => {
-    user.creat({
+    User.create({
         username: req.body.username,
         password: req.body.password
     })
@@ -22,7 +22,7 @@ router.post('/',(req, res) => {
 });
 
 router.post('/login', (req,res) => {
-    user.findone({
+    User.findone({
         where: {
             username:req.body.username
         }
@@ -47,7 +47,7 @@ router.post('/login', (req,res) => {
 });
 
 router.post('/logout', (req, res) => {
-    user.destroy ({
+    User.destroy ({
         where: {
             id: req.params.id
         }
