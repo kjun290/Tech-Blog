@@ -4,4 +4,5 @@ This application allows you to post about anything tech related as well as allow
 
 You will be require to install: npm express, express-handlebars, session, sequlize in order to properly utilize his application. 
 
-![14-mvc-homework-demo-01](https://user-images.githubusercontent.com/73242250/123175996-54c71880-d448-11eb-8a14-b52359bceb7b.gif)
+![techblog](https://user-images.githubusercontent.com/73242250/125653732-6614bdfe-f899-4a63-ae86-a294e5127a41.png)
+
